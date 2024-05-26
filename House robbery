@@ -1,0 +1,21 @@
+class Solution:
+    #TC: O(n)
+    #SC:O(n)
+    def rob(self, nums: List[int]) -> int:
+        '''we can start with oth house or 1st house and get the maximum by the end of array '''
+
+        rob1=0
+        rob2=0
+
+        for num in nums:
+            t=max(num+rob1, rob2)
+            rob1=rob2
+            rob2=t
+        return rob2
+  
+
+           
+       
+        
+    
+        
